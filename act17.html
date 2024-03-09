@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Inline+One:ital@0;1&family=Bungee&family=Itim&family=Lobster&family=Rubik+Doodle+Shadow&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Inline+One:ital@0;1&family=Bungee&family=Itim&family=Lobster&family=Neucha&family=Rubik+Doodle+Shadow&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Inline+One:ital@0;1&family=Bungee&family=Itim&family=Lobster&family=Mochiy+Pop+One&family=Neucha&family=Rubik+Doodle+Shadow&family=Sixtyfour&display=swap" rel="stylesheet">
+
+</head>
+	<title>Name Tag Generator</title>
+    <div class="container">
+        <h1>Name Tag Generator</h1>
+	<style>
+        body {
+            background-image: url(2-24409_purple-aesthetic-background.jpg);
+            background-size: cover;
+        }
+
+h1 {
+    font-family: "Bungee", sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    color: #d52ae4;
+    text-shadow: 
+    5px 5px 0px #b80f85,
+    10px 10px 0px #d34aa5
+}
+
+		#nameTagGenerator {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		#nameInput {
+			padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-size: 29px;
+            background-color: #ce7dbe;
+            color: #332e34;
+			border-radius: 5px;
+            border: transparent;
+			width: 300px;
+			margin-bottom: 20px;
+		}
+
+		#generateButton {
+			padding: 10px 20px;
+            font-family: "Neucha", cursive;
+			font-size: 29px;
+			background-color: #e432c9;
+			color: #9a3a94;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		#nameTagList {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+        .nameTag {
+			background-color:#ec35bf;
+            box-shadow: 7px 9px #ec60cd;
+            width: 335px;
+            height: 80px;
+			padding: 10px;
+			margin: 10px;
+			font-size: 31px;
+            font-family: 'Courier New', Courier, monospace;
+			border: 2px solid transparent;
+			border-radius: 15px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="nameTagGenerator">
+		<input type="text" id="nameInput" placeholder="Enter your name here...">
+		<button id="generateButton" onclick="generateNameTag()">Generate Name Tag</button>
+		<div id="nameTagList"></div>
+	</div>
+	<script>
+		function generateNameTag() {
+			var nameInput = document.getElementById('nameInput');
+			var name = nameInput.value;
+			var nameTagList = document.getElementById('nameTagList');
+			var nameTag = document.createElement('div');
+			nameTag.className = 'nameTag';
+            nameTag.innerText = 'Hi, its me:  ' + name;
+			nameTagList.appendChild(nameTag);
+			nameInput.value = '';
+		}
+	</script>
+</body>
+</html>
